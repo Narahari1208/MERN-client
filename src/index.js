@@ -1,19 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-//import './index.css';
-import { BrowserRouter as Router,Route,Routes} from 'react-router-dom';
-import Register from './components/Register';
-import Navbar from './components/Navbar';
+import './index.css';
+import { BrowserRouter as Router, Routes,Route } from 'react-router-dom';
+import Navbar from './components/navbar';
+import Register from './components/register';
+import Home from './components/home';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+  <div>
     <Router>
-    <Navbar/>
-    <Routes>
-      <Route path="/register" element={<Register />}/>
-      <Route path="/login" element={<Login/>}/>
-      <Route path="/logout" element={<Logout/>}/>
-    </Routes>
+      <Navbar/>
+      <h1>Web App</h1>
+      <Home/>
+      <Routes>
+        <Route path="/register" element={<Register/>}/>
+        <Route path="/login" element={<h1>Login</h1>}/>
+        <Route path="/logout" element={<h1>Logout</h1>}/>
+      </Routes>
     </Router>
-  </React.StrictMode>
+  </div>
 );
